@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Building</title>
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- SPLASH SCREEN -->
+    <div id="splashScreen" class="splash-screen">
+        <div class="splash-glow"></div>
+        <img src="icon.png" class="splash-icon">
+    </div>
+
+    <main class="main-screen">
+        <div class="app-frame">
+
+            <!-- PIN KÓDOS BELÉPÉS -->
+            <div id="loginScreen" class="login-screen">
+                <div class="login-box">
+                    <div class="login-title">Belépés</div>
+
+                    <input id="pinInput" type="password" maxlength="4" placeholder="PIN kód">
+
+                    <div id="pinError" class="pin-error">Hibás kód!</div>
+
+                    <button class="login-btn" onclick="checkPIN()">Belépés</button>
+                </div>
+            </div>
+
+            <!-- FŐOLDAL GOMBOK -->
+            <div id="mainScreen" class="button-container" style="display:none;">
+
+                <a class="main-button" href="teamleader.html">Team Leader</a>
+                <a class="main-button" href="meretvalto.html">Méretváltó</a>
+                <a class="main-button" href="cellatamogato.html">Cella támogató</a>
+                <a class="main-button" href="shiftcoordinator.html">Shift Coordinator</a>
+
+                <button class="main-button adam-button" onclick="openAdam()">
+                    Hívd Ádámot 😆
+                </button>
+
+            </div>
+
+            <!-- POPUP -->
+            <div id="popup" class="popup-overlay">
+                <div class="popup-content">
+                    <div id="popupName" class="popup-name"></div>
+                    <div id="popupInternal" class="popup-internal"></div>
+
+                    <div class="popup-mobile-text">Mobilon hívom</div>
+
+                    <img id="popupPhone" src="ic_phone.png" class="popup-phone-icon">
+
+                    <button class="popup-close" onclick="closePopup()">Bezárás</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

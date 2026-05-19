@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Team Leader</title>
+
+    <!-- Alap stílusok (főoldal gomb dizájn, app-frame, stb.) -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- TeamLeader oldal saját stílusa -->
+    <link rel="stylesheet" href="teamleader.css">
+</head>
+
+<body>
+
+    <main class="main-screen">
+
+        <!-- TeamLeader háttér -->
+        <div class="app-frame tl-bg">
+
+            <!-- Vissza gomb -->
+            <a href="index.html" class="back-btn">Vissza</a>
+
+            <!-- Gombok -->
+            <div class="button-container">
+
+                <button class="main-button tl-btn"
+                    onclick="openTL('Team Leader Cella #16 (1)', '(0) 06/70-685-9444', '+36706859444')">
+                    Team Leader Cella #16 (1)
+                </button>
+
+                <button class="main-button tl-btn"
+                    onclick="openTL('Team Leader Cella #17 (2)', '(0) 06/70-513-3670', '+36705133670')">
+                    Team Leader Cella #17 (2)
+                </button>
+
+                <button class="main-button tl-btn"
+                    onclick="openTL('Team Leader Cella #18 (EXA)', '(0) 06/70-685-9442', '+36706859442')">
+                    Team Leader Cella #18 (EXA)
+                </button>
+
+                <button class="main-button tl-btn"
+                    onclick="openTL('Team Leader Cella #24 (3)', '(0) 06/70-513-3738', '+36705133738')">
+                    Team Leader Cella #24 (3)
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- POPUP (BottomSheet) -->
+    <div id="popup" class="popup-overlay">
+
+        <div class="popup-content">
+
+            <div id="popupName" class="popup-name"></div>
+            <div id="popupInternal" class="popup-internal"></div>
+
+            <div class="popup-mobile-text">Mobilon hívom</div>
+
+            <img id="popupPhone" src="ic_phone.png" class="popup-phone-icon">
+
+            <button class="popup-close" onclick="closePopup()">Bezárás</button>
+
+        </div>
+
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+
+</body>
+</html>

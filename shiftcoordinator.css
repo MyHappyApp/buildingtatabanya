@@ -1,0 +1,162 @@
+/* Háttér */
+.sc-bg {
+    background-image: url("hatter8.png");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Vissza gomb */
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    padding: 8px 14px;
+    background: rgba(0,0,0,0.55);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 8px;
+
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+
+    backdrop-filter: blur(4px);
+}
+
+/* Görgethető tartalom */
+.scroll-area {
+    position: absolute;
+    inset: 0;
+    overflow-y: auto;
+    padding-top: 70px;
+}
+
+.scroll-inner {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Időpont */
+.sc-time {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Cím */
+.sc-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #D0D0D0;
+    margin-bottom: 24px;
+}
+
+/* Kártyák */
+.sc-card {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 16px;
+
+    background: linear-gradient(
+        180deg,
+        rgba(255,255,255,0.05),
+        rgba(0,0,0,0.35)
+    );
+
+    border: 2px solid rgba(255,0,0,0.55);
+    border-radius: 14px;
+
+    box-shadow:
+        0 0 14px rgba(255,0,0,0.25),
+        inset 0 1px 2px rgba(255,255,255,0.10),
+        inset 0 -2px 4px rgba(0,0,0,0.45);
+
+    backdrop-filter: blur(6px);
+
+    cursor: pointer;
+}
+
+/* Név */
+.sc-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Pozíció */
+.sc-role {
+    font-size: 14px;
+    color: white;
+    opacity: 0.9;
+}
+
+/* Popup overlay */
+.popup-overlay {
+    display: none;
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0,0,0,0.55);
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 20px;
+}
+
+/* Popup doboz */
+.popup-content {
+    width: 85%;
+    max-width: 320px;
+    background: #111;
+    padding: 22px;
+    border-radius: 16px;
+
+    text-align: center;
+    box-shadow: 0 0 20px rgba(255,0,0,0.35);
+}
+
+/* Popup név */
+.popup-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff0000;
+    margin-bottom: 10px;
+}
+
+/* Popup belső szám */
+.popup-internal {
+    font-size: 17px;
+    color: #ddd;
+    margin-bottom: 18px;
+}
+
+/* Mobilon hívom */
+.popup-mobile-text {
+    font-size: 17px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+/* Telefon ikon */
+.popup-phone-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 16px auto;
+    display: block;
+    cursor: pointer;
+}
+
+/* Bezárás gomb */
+.popup-close {
+    padding: 10px 20px;
+    background: #333;
+    border: 1px solid #555;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+
+    margin: 0 auto;
+    display: block;
+}

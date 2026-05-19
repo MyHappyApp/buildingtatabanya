@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Shift Coordinator</title>
+
+    <!-- Alap stílusok -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Shift Coordinator saját stílusa -->
+    <link rel="stylesheet" href="shiftcoordinator.css">
+</head>
+
+<body>
+
+    <main class="main-screen">
+
+        <div class="app-frame sc-bg">
+
+            <!-- Vissza gomb -->
+            <a href="index.html" class="back-btn">Vissza</a>
+
+            <!-- GÖRGETHETŐ TARTALOM -->
+            <div class="scroll-area">
+
+                <div class="scroll-inner">
+
+                    <!-- Időpont -->
+                    <div class="sc-time">H–P 07:00–15:30</div>
+
+                    <!-- Cím -->
+                    <div class="sc-title">Shift Coordinator</div>
+
+                    <!-- ===================== -->
+                    <!-- A SHIFT -->
+                    <!-- ===================== -->
+
+                    <div class="sc-card"
+                        onclick="openTL('Paluska Árpád', '(0) 06/70-513-3857', '+36705133857')">
+                        <div class="sc-name">Paluska Árpád</div>
+                        <div class="sc-role">(A shift)</div>
+                    </div>
+
+                    <!-- ===================== -->
+                    <!-- B SHIFT -->
+                    <!-- ===================== -->
+
+                    <div class="sc-card"
+                        onclick="openTL('Hivekovics Krisztián', '(0) 06/70-685-9587', '+36706859587')">
+                        <div class="sc-name">Hivekovics Krisztián</div>
+                        <div class="sc-role">(B shift)</div>
+                    </div>
+
+                    <!-- ===================== -->
+                    <!-- C SHIFT -->
+                    <!-- ===================== -->
+
+                    <div class="sc-card"
+                        onclick="openTL('Sárközi Ervin', '(0) 06/70-685-9587', '+36706859587')">
+                        <div class="sc-name">Sárközi Ervin</div>
+                        <div class="sc-role">(C shift)</div>
+                    </div>
+
+                    <!-- ===================== -->
+                    <!-- D SHIFT -->
+                    <!-- ===================== -->
+
+                    <div class="sc-card"
+                        onclick="openTL('Verasztó András', '(0) 06/70-685-9537', '+36706859537')">
+                        <div class="sc-name">Verasztó András</div>
+                        <div class="sc-role">(D shift)</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- POPUP -->
+    <div id="popup" class="popup-overlay">
+
+        <div class="popup-content">
+
+            <div id="popupName" class="popup-name"></div>
+            <div id="popupInternal" class="popup-internal"></div>
+
+            <div class="popup-mobile-text">Mobilon hívom</div>
+
+            <img id="popupPhone" src="ic_phone.png" class="popup-phone-icon">
+
+            <button class="popup-close" onclick="closePopup()">Bezárás</button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

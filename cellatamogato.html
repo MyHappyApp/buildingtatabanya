@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Cella Támogató</title>
+
+    <!-- Alap stílusok -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Cella Támogató saját stílusa -->
+    <link rel="stylesheet" href="cellatamogato.css">
+</head>
+
+<body>
+
+    <main class="main-screen">
+
+        <div class="app-frame ct-bg">
+
+            <!-- Vissza gomb -->
+            <a href="index.html" class="back-btn">Vissza</a>
+
+            <!-- GÖRGETHETŐ TARTALOM -->
+            <div class="scroll-area">
+
+                <div class="scroll-inner">
+
+                    <!-- Időpont -->
+                    <div class="ct-time">H–P 07:00–15:30</div>
+
+                    <!-- Scroll jelzés -->
+                    <div class="ct-scroll">▼ görgess lefelé ▼</div>
+
+                    <!-- ===================== -->
+                    <!-- CELLA #16 -->
+                    <!-- ===================== -->
+
+                    <div class="ct-title">Cella #16</div>
+
+                    <div class="ct-card" onclick="openTL('Fodor Tamás', '(0) 06/70-685-9582', '+36706859582')">
+                        <div class="ct-name">Fodor Tamás</div>
+                        <div class="ct-role">(Cella vezető)</div>
+                    </div>
+
+                    <div class="ct-card" onclick="openTL('Káplár Márk', '(0) 06/70-696-0099', '+36706960099')">
+                        <div class="ct-name">Káplár Márk</div>
+                        <div class="ct-role">(Process Lead)</div>
+                    </div>
+
+                    <div class="ct-card" onclick="openTL('Kiss Balázs', '(0) 06/70-690-5729', '+36706905729')">
+                        <div class="ct-name">Kiss Balázs</div>
+                        <div class="ct-role">(Maintenance Lead)</div>
+                    </div>
+
+                    <!-- ===================== -->
+                    <!-- CELLA #17 -->
+                    <!-- ===================== -->
+
+                    <div class="ct-title">Cella #17</div>
+
+                    <div class="ct-card" onclick="openTL('Varga György', '(0) 06/30-883-9974', '+36308839974')">
+                        <div class="ct-name">Varga György</div>
+                        <div class="ct-role">(Cella vezető)</div>
+                    </div>
+
+                    <div class="ct-card" onclick="openTL('Sütő Péter', '(0) 06/70-685-9445', '+36706859445')">
+                        <div class="ct-name">Sütő Péter</div>
+                        <div class="ct-role">(Process Lead)</div>
+                    </div>
+
+                    <div class="ct-card" onclick="openTL('Csáti Tamás', '(0) 06/70-685-9527', '+36706859527')">
+                        <div class="ct-name">Csáti Tamás</div>
+                        <div class="ct-role">(Maintenance Lead)</div>
+                    </div>
+
+                    <!-- ===================== -->
+                    <!-- CELLA #24 -->
+                    <!-- ===================== -->
+
+                    <div class="ct-title">Cella #24</div>
+
+                    <div class="ct-card" onclick="openTL('Farkas Krisztián', '(0) 06/70-666-3346', '+36706663346')">
+                        <div class="ct-name">Farkas Krisztián</div>
+                        <div class="ct-role">(Cella vezető)</div>
+                    </div>
+
+                    <div class="ct-card" onclick="openTL('Lengyel Ferenc', '(0) 06/70-510-5138', '+36705105138')">
+                        <div class="ct-name">Lengyel Ferenc</div>
+                        <div class="ct-role">(Process Lead)</div>
+                    </div>
+
+                    <div class="ct-card" onclick="openTL('Berta Róbert', '(0) 06/70-685-9463', '+36706859463')">
+                        <div class="ct-name">Berta Róbert</div>
+                        <div class="ct-role">(Maintenance Lead)</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- POPUP -->
+    <div id="popup" class="popup-overlay">
+
+        <div class="popup-content">
+
+            <div id="popupName" class="popup-name"></div>
+            <div id="popupInternal" class="popup-internal"></div>
+
+            <div class="popup-mobile-text">Mobilon hívom</div>
+
+            <img id="popupPhone" src="ic_phone.png" class="popup-phone-icon">
+
+            <button class="popup-close" onclick="closePopup()">Bezárás</button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
