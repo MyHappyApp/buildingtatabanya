@@ -2,11 +2,9 @@
   "name": "Building App",
   "short_name": "Building",
 
-  "start_url": "./",
-
-  "scope": "./",
-
-  "display": "standalone",
+  "start_url": "./index.html",
+"scope": "./",
+"display": "standalone",
 
   "orientation": "portrait",
 

@@ -1,9 +1,13 @@
-// Egyszerű service worker
+const CACHE_NAME = "building-app-v1";
 
 self.addEventListener("install", event => {
     self.skipWaiting();
 });
 
 self.addEventListener("activate", event => {
-    console.log("Service Worker aktiválva");
+    event.waitUntil(self.clients.claim());
+});
+
+self.addEventListener("fetch", event => {
+    event.respondWith(fetch(event.request));
 });
