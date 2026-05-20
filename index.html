@@ -24,16 +24,6 @@
     <main class="main-screen">
         <div class="app-frame">
 
-            <!-- HAMBURGER MENÜ -->
-            <div class="hamburger-menu">
-                <button class="hamburger-btn" onclick="toggleMenu()">☰</button>
-
-                <div id="menuDropdown" class="menu-dropdown">
-                    <button onclick="shareApp()">Megosztás</button>
-                    <button onclick="installApp()">Appikon telepítése</button>
-                </div>
-            </div>
-
             <!-- PIN KÓDOS BELÉPÉS -->
             <div id="loginScreen" class="login-screen">
                 <div class="login-box">
@@ -55,10 +45,20 @@
                 <a class="main-button" href="cellatamogato.html">Cella támogató</a>
                 <a class="main-button" href="shiftcoordinator.html">Shift Coordinator</a>
 
-                <!-- EZ LESZ A TELEFONSZÁM HOZZÁADÁSA GOMB -->
+                <!-- TELEFONSZÁM HOZZÁADÁSA GOMB -->
                 <button class="main-button adam-button" onclick="openCustomCallPopup()">
                     Telefonszám hozzáadása
                 </button>
+
+                <!-- HAMBURGER MENÜ A GOMBOK ALATT -->
+                <div class="hamburger-menu">
+                    <button class="hamburger-btn" onclick="toggleMenu()">☰</button>
+
+                    <div id="menuDropdown" class="menu-dropdown">
+                        <button onclick="shareApp()">Megosztás</button>
+                        <button onclick="installApp()">Appikon telepítése</button>
+                    </div>
+                </div>
 
             </div>
 
