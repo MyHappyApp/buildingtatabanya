@@ -1,18 +1,13 @@
 {
   "name": "Building App",
   "short_name": "Building",
-
-  "start_url": "./index.html",
-"scope": "./",
-"display": "standalone",
-
+  "description": "Building telefonszámos webapp",
+  "start_url": "/buildingtatabanya/",
+  "scope": "/buildingtatabanya/",
+  "display": "standalone",
   "orientation": "portrait",
-
   "background_color": "#000000",
   "theme_color": "#000000",
-
-  "description": "Building telefonszámos webapp",
-
   "icons": [
     {
       "src": "icon.png",
