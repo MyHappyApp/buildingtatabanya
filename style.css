@@ -307,9 +307,10 @@ html, body {
 
 .hamburger-menu {
     position: absolute;
-    bottom: 18px;
+    bottom: calc(70px + env(safe-area-inset-bottom));
     left: 18px;
     z-index: 999999;
+}
 }
 
 .hamburger-btn {
