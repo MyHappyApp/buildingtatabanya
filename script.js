@@ -173,7 +173,7 @@ async function shareApp() {
         await navigator.share({
             title: "Building",
             text: "Building telefonszámos app",
-            url: window.location.href
+            url: "https://myhappyapp.github.io/buildingtatabanya/"
         });
 
     } catch (err) {
