@@ -91,15 +91,6 @@ html, body {
     transition: 0.15s ease;
 }
 
-/* ÁDÁM GOMB */
-.adam-button {
-    border-color: rgba(255, 200, 0, 0.8);
-    box-shadow:
-        0 0 18px rgba(255, 200, 0, 0.35),
-        inset 0 1px 2px rgba(255, 255, 255, 0.15),
-        inset 0 -2px 4px rgba(0, 0, 0, 0.45);
-}
-
 /* POPUP */
 .popup-overlay {
     display: none;
@@ -226,7 +217,7 @@ html, body {
     cursor: pointer;
 }
 
-/* === TURBÓZOTT SPLASH – TISZTA VERZIÓ === */
+/* === TURBÓZOTT SPLASH === */
 
 .splash-screen {
     position: absolute;
@@ -238,7 +229,6 @@ html, body {
     z-index: 100000;
 }
 
-/* Piros fény aura */
 .splash-glow {
     position: absolute;
     width: 260px;
@@ -248,47 +238,163 @@ html, body {
     animation: glowPulse 2.2s ease-in-out forwards;
 }
 
-/* Ikon animáció */
 .splash-icon {
     width: 170px;
     height: 170px;
     animation: iconIntro 2.2s ease forwards;
 }
 
-/* Ikon beúszás */
 @keyframes iconIntro {
-    0% {
-        opacity: 0;
-        transform: scale(0.6) translateY(20px);
-        filter: drop-shadow(0 0 0px red);
-    }
-    40% {
-        opacity: 1;
-        transform: scale(1.05) translateY(0);
-        filter: drop-shadow(0 0 25px red);
-    }
-    70% {
-        transform: scale(1) translateY(-6px);
-        filter: drop-shadow(0 0 12px red);
-    }
-    100% {
-        transform: scale(1) translateY(0);
-        filter: drop-shadow(0 0 8px red);
-    }
+    0% { opacity: 0; transform: scale(0.6) translateY(20px); }
+    40% { opacity: 1; transform: scale(1.05); }
+    70% { transform: scale(1) translateY(-6px); }
+    100% { transform: scale(1); }
 }
 
-/* Aura pulzálás */
 @keyframes glowPulse {
-    0% {
-        opacity: 0;
-        transform: scale(0.7);
-    }
-    50% {
-        opacity: 1;
-        transform: scale(1.1);
-    }
-    100% {
-        opacity: 0.8;
-        transform: scale(1);
-    }
+    0% { opacity: 0; transform: scale(0.7); }
+    50% { opacity: 1; transform: scale(1.1); }
+    100% { opacity: 0.8; transform: scale(1); }
+}
+
+/* === TELEFONSZÁM HOZZÁADÁSA INPUTOK === */
+
+.popup-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #444;
+    background: #222;
+    color: white;
+    outline: none;
+}
+
+.popup-input:focus {
+    border-color: #ff0000;
+}
+
+.popup-save {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.04),
+        rgba(255, 255, 255, 0.02),
+        rgba(0, 0, 0, 0.30)
+    );
+    border: 2px solid rgba(255, 0, 0, 0.55);
+    border-radius: 14px;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 14px;
+
+    box-shadow:
+        0 0 14px rgba(255, 0, 0, 0.25),
+        inset 0 1px 2px rgba(255, 255, 255, 0.10),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.45);
+}
+
+.popup-save:active {
+    transform: scale(0.97);
+}
+/* ========================= */
+/* ===== HAMBURGER MENÜ ==== */
+/* ========================= */
+
+.hamburger-menu {
+    position: absolute;
+    bottom: 18px;
+    left: 18px;
+    z-index: 999999;
+}
+
+.hamburger-btn {
+    width: 48px;
+    height: 48px;
+
+    border: none;
+    border-radius: 14px;
+
+    background: rgba(0,0,0,0.55);
+
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+
+    backdrop-filter: blur(6px);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    box-shadow:
+        0 0 12px rgba(255,0,0,0.18),
+        inset 0 1px 1px rgba(255,255,255,0.06);
+
+    cursor: pointer;
+}
+
+.hamburger-btn:active {
+    transform: scale(0.96);
+}
+
+.menu-dropdown {
+    display: none;
+
+    position: absolute;
+
+    bottom: 56px;
+left: 0;
+
+    width: 220px;
+
+    background: rgba(10,10,10,0.95);
+
+    border-radius: 16px;
+
+    padding: 10px;
+
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+        0 0 20px rgba(255,0,0,0.20);
+}
+
+.menu-dropdown button {
+    width: 100%;
+
+    padding: 14px;
+
+    margin-bottom: 8px;
+
+    border: none;
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(45,45,45,0.90),
+            rgba(12,12,12,0.96)
+        );
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    border: 2px solid rgba(255,0,0,0.55);
+
+    cursor: pointer;
+}
+
+.menu-dropdown button:last-child {
+    margin-bottom: 0;
+}
+
+.menu-dropdown button:active {
+    transform: scale(0.98);
 }
