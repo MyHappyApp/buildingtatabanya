@@ -211,4 +211,23 @@ async function installApp() {
     }
 
     deferredPrompt = null;
+}// ==========================================
+// ========= SERVICE WORKER =================
+// ==========================================
+
+if ("serviceWorker" in navigator) {
+
+    window.addEventListener("load", () => {
+
+        navigator.serviceWorker
+            .register("./service-worker.js")
+
+            .then((registration) => {
+                console.log("Service Worker sikeresen regisztrálva");
+            })
+
+            .catch((error) => {
+                console.log("Service Worker hiba:", error);
+            });
+    });
 }
